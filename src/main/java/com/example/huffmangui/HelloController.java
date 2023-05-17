@@ -84,28 +84,4 @@ public class HelloController {
         }
     }
 
-    /*private void showKey() {
-        File key = new File(saveTo.getText());
-
-        try (FileReader fr = new FileReader(key);
-             BufferedReader bufferedReader = new BufferedReader(fr)) {
-            String intLine = bufferedReader.readLine();
-            System.out.println(intLine);
-
-            int inValue = Integer.parseInt(intLine);
-
-            StringBuilder sb = new StringBuilder();
-            sb.append("The generated key for the file is: \n");
-            for (int i = 0; i < inValue + 1; i++) {
-                String line = bufferedReader.readLine();
-                sb.append(line).append("\n");
-            }
-
-            String messagesText = sb.toString();
-            messages.setText(messagesText);
-
-        } catch (IOException ex) {
-            throw new RuntimeException(ex);
-        }
-    }*/
 }
