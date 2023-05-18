@@ -41,8 +41,8 @@ public class HelloController {
                 System.out.println(e.getMessage());
                 Alert errorAlert = new Alert(Alert.AlertType.ERROR);
                 errorAlert.setTitle("Fatal error");
-                errorAlert.setContentText("Sth went wrong even though there was input.");
-                errorAlert.setHeaderText("error alert");
+                errorAlert.setContentText("Something went wrong even though there was input.");
+                errorAlert.setHeaderText("Error alert");
                 errorAlert.showAndWait();
             }
 
@@ -50,8 +50,8 @@ public class HelloController {
         else {
             Alert errorAlert = new Alert(Alert.AlertType.ERROR);
             errorAlert.setTitle("Input not valid");
-            errorAlert.setContentText("The size of First Name must be between 2 and 25 characters");
-            errorAlert.setHeaderText("error alert");
+            errorAlert.setContentText("You must enter name of the file placed in the 'files' catalogue");
+            errorAlert.setHeaderText("Error alert");
             errorAlert.showAndWait();
         }
     }
@@ -65,9 +65,20 @@ public class HelloController {
                 showDictionary();
 
             } catch (Exception e) {
-                ////TODO MESSAGE BOX
-                throw new RuntimeException(e);
+                System.out.println(e.getMessage());
+                Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+                errorAlert.setTitle("Fatal error");
+                errorAlert.setContentText("Something went wrong even though there was input.");
+                errorAlert.setHeaderText("Error alert");
+                errorAlert.showAndWait();
             }
+        }
+        else {
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setTitle("Input not valid");
+            errorAlert.setContentText("You must enter name of the file placed in the 'files' catalogue");
+            errorAlert.setHeaderText("Error alert");
+            errorAlert.showAndWait();
         }
     }
 
